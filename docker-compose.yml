@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  backend:
+    image: node
+    ports:
+      - 3001:3000
+    env_file: ./dot.env
+    volumes:
+      - ./:/var/www
+    working_dir: /var/www
+    command: npm run start
